@@ -35,6 +35,7 @@ header p {
   margin: 0 auto;
 }
 
+
 /* Style the timeline cards section */
 section {
   /* Create a flexible layout for cards */
@@ -48,7 +49,7 @@ section {
   /* Hide scrollbar in Firefox */
   scrollbar-width: none;
   /* Add spacing around and within the section */
-  padding: 40px 20px;
+  padding: 80px 20px;
   gap: 20px;
 }
 
@@ -81,6 +82,19 @@ section div:hover {
   transform: translateY(-5px);
   /* Enhance the shadow on hover */
   box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+}
+/* Style the hidden description text in cards */
+section div p {
+  /* Initially hide the description text */
+  display: none;
+  /* Add spacing above the description */
+  margin-top: 10px;
+}
+
+/* Show the description text when the card is hovered */
+section div:hover p {
+  /* Display the description text on hover */
+  display: block;
 }
 
 /* Style the year heading in timeline cards */
@@ -126,3 +140,34 @@ section img {
   /* Make the image a block element */
   display: block;
 }
+
+/* Scroll snapping for better user experience */
+section {
+  /* Enable scroll snapping */
+  scroll-snap-type: x mandatory;
+}
+
+p {
+  /* Center the text and limit its width for better readability */
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto 40px auto;
+  /* Use a slightly larger font size */
+  font-size: 18px;
+}
+
+/* Responsive design for smaller screens */
+@media screen and (max-width: 425px) {
+  section {
+    padding: 40px 10px;
+  }
+  section div {
+    width: 250px;
+  }
+  /* Style to stack cards vertically on small screens */
+  section {
+    flex-wrap: wrap;
+    justify-content: center;  
+  }
+}
+
