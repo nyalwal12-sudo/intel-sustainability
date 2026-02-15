@@ -53,11 +53,6 @@ section {
   gap: 20px;
 }
 
-/* Hide scrollbar in Chrome, Safari, and Edge */
-section::-webkit-scrollbar {
-  display: none;
-}
-
 /* Style individual timeline cards */
 section div {
   /* Each card takes up a fixed width */
@@ -141,11 +136,6 @@ section img {
   display: block;
 }
 
-/* Scroll snapping for better user experience */
-section {
-  /* Enable scroll snapping */
-  scroll-snap-type: x mandatory;
-}
 
 p {
   /* Center the text and limit its width for better readability */
@@ -157,7 +147,7 @@ p {
 }
 
 /* Responsive design for smaller screens */
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 768px) {
   section {
     padding: 40px 10px;
   }
